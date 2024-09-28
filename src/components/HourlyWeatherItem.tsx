@@ -1,0 +1,14 @@
+import React from "react";
+
+const HourlyWeatherItem = () => {
+  return (
+    <li className="weather-item">
+      <p className="time">00:00</p>
+      {/* <img src="icons/clouds.svg" className="weather-icon" /> */}
+      <span className="material-symbols-rounded">clear_day</span>
+      <p className="temperature">20°</p>
+    </li>
+  );
+};
+
+export default HourlyWeatherItem;
