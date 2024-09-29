@@ -10,7 +10,7 @@ const CurrentWeather = ({ currentWeather }) => {
           className="weather-icon h-16 mx-auto text-teal-400"
           style={{
             filter:
-              "invert(100%) sepia(80%) saturate(382%) hue-rotate(146deg) brightness(95%) contrast(40%)",
+              "invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)",
           }}
         />
         <h2 className="temperature text-3xl font-bold my-1">
