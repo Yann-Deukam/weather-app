@@ -1,15 +1,22 @@
 import React from "react";
 
-const CurrentWeather = () => {
+const CurrentWeather = ({ currentWeather }) => {
   return (
     <div className="current-weather-time flex">
       <div className="current-weather">
         {/* <img src="icons/clouds.svg" className="weather-icon" /> */}
-        <span className="material-symbols-rounded text-4xl">clear_day</span>
+        <img
+          src={`icon/${currentWeather.weatherIcon}.svg`}
+          className="weather-icon h-16 mx-auto text-teal-400"
+          style={{
+            filter:
+              "invert(100%) sepia(80%) saturate(382%) hue-rotate(146deg) brightness(95%) contrast(40%)",
+          }}
+        />
         <h2 className="temperature text-3xl font-bold my-1">
-          20 <span>°C</span>
+          {currentWeather.temperature} <span>°C</span>
         </h2>
-        <p className="description text-sm">cloudy</p>
+        <p className="description text-sm">{currentWeather.description}</p>
       </div>
       <div className="current-time">
         <div className="relative pt-12">

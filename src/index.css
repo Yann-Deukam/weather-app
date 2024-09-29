@@ -21,6 +21,10 @@
   .weather-button {
     @apply border border-white/20 bg-white/10 p-2 rounded-md hover:bg-white/30 transition ease-in duration-150;
   }
+
+  .current-weather .weather-icon {
+    @apply text-4xl text-white/50 items-center;
+  }
 }
 
 * {
