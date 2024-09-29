@@ -35,6 +35,7 @@ const App = () => {
       const description = data.current.condition.text;
       const humidity = data.current.humidity;
       const pressure = data.current.pressure_mb;
+      const time = data.location.localtime;
 
       const weatherIcon = Object.keys(weatherCodes).find((icon) =>
         weatherCodes[icon].includes(data.current.condition.code)
@@ -46,6 +47,7 @@ const App = () => {
         humidity,
         pressure,
         weatherIcon,
+        time,
       });
 
       searchInputRef.current.value = data.location.name;
