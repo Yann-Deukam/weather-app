@@ -39,28 +39,48 @@ const CurrentWeather = ({ currentWeather }) => {
   };
 
   return (
-    <div className="current-weather-time flex">
-      <div className="current-weather">
+    <div className="current-weather-time flex justify-center">
+      <div className="current-weather w-[200px]">
+        {currentWeather.weatherIcon ? (
+          <>
+            <img
+              src={`icon/${currentWeather.weatherIcon}.svg`}
+              className="weather-icon h-16 mx-auto text-teal-400"
+              style={{
+                filter:
+                  "invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)",
+              }}
+            />
+            <h2 className="temperature text-3xl font-bold my-1">
+              {currentWeather.temperature} <span>°C</span>
+            </h2>
+          </>
+        ) : (
+          <p className="text-center font-semibold text-white/40">
+            No current weather data available.
+          </p>
+        )}
+      </div>
+      <div className="w-[142px] current-time flex flex-col items-center pt-12">
         <img
-          src={`icon/${currentWeather.weatherIcon}.svg`}
-          className="weather-icon h-16 mx-auto text-teal-400"
+          src="./icon/watch.svg"
+          alt="watch"
+          className="h-10"
           style={{
             filter:
-              "invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)",
+              "invert(0%) sepia(100%) saturate(100%) hue-rotate(180deg) brightness(100%) contrast(100%)",
           }}
         />
-        <h2 className="temperature text-3xl font-bold my-1">
-          {currentWeather.temperature} <span>°C</span>
-        </h2>
-        <p className="description text-sm">{currentWeather.description}</p>
-      </div>
-      <div className="current-time">
-        <div className="relative pt-12">
-          <img src="./icon/watch.svg" alt="watch" className="parameter-icon" />
+        {localTime ? ( // Check if localTime has a value before rendering
           <h2 className="text-4xl font-square text-teal-200">
             {formatTimeForDisplay()}
           </h2>
-        </div>
+        ) : (
+          <h2 className="text-4xl font-square text-teal-200">
+            {/* Render nothing or a placeholder if localTime is undefined */}
+            {/* You can leave this empty or add a message if you prefer */}
+          </h2>
+        )}
       </div>
     </div>
   );

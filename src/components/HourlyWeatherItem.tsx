@@ -8,7 +8,7 @@ const HourlyWeatherItem = ({ hourWeather }) => {
   const temperature = Math.floor(hourWeather.temp_c);
   const time = hourWeather.time.split(" ")[1].substring(0, 5);
   return (
-    <li className="weather-item">
+    <li className="weather-item mt-10">
       <p className="time">{time}</p>
       {/* <img src="icons/clouds.svg" className="weather-icon" /> */}
       <img

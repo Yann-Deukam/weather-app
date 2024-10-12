@@ -7,16 +7,16 @@
 
 @layer components {
   .parameter-item {
-    @apply text-center p-10 w-[168px] bg-black/20 backdrop-blur-md border border-white/10 rounded-md;
+    @apply text-center p-10 w-[170px] bg-black/20 backdrop-blur-md border border-white/10 rounded-md;
   }
   .parameter-icon {
     @apply text-4xl text-white/50;
   }
   .current-weather {
-    @apply w-52 text-center my-2 p-10 bg-black/20 backdrop-blur-md border border-white/10 rounded-md;
+    @apply text-center my-2 p-10 bg-black/20 backdrop-blur-md border border-white/10 rounded-md;
   }
   .current-time {
-    @apply w-32 text-center ml-2 my-2 items-center bg-black/20 backdrop-blur-md border border-white/10 rounded-md;
+    @apply text-center ml-2 my-2 items-center bg-black/20 backdrop-blur-md border border-white/10 rounded-md;
   }
   .weather-button {
     @apply border border-white/20 bg-white/10 p-2 rounded-md hover:bg-white/30 transition ease-in duration-150;
@@ -38,7 +38,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 102.5vh;
   background-image: url("background.jpg");
   background-size: cover;
   background-position: center;
@@ -65,7 +65,7 @@ body {
 }
 
 .hourly-forecast {
-  padding: 16px 25px;
+  padding: 0px 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
@@ -75,8 +75,6 @@ body {
   overflow-x: auto;
   list-style: none;
   scrollbar-width: thin;
-  padding-bottom: 16px;
-  margin-top: -16px;
   scrollbar-color: transparent transparent;
 }
 
